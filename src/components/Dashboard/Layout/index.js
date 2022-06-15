@@ -3,6 +3,7 @@ import DashBoardNavbar from "../Navbar";
 import DashBoardSidebar from "../Sidebar";
 import React, { useState } from "react"
 import { Link, Outlet } from "react-router-dom";
+import dashboardRoutes from "../../../_nav";
 
 
 export default function IndexLayout() {
@@ -21,13 +22,13 @@ export default function IndexLayout() {
             toggleSidebar={toggleSidebar}
           />
           <div className="overflow-auto" style={{ height: "90vh", backgroundColor: "white" }}>
-            <nav className="py-1" style={{ backgroundColor: "#F6F9FF" }}>
-              <span>Dashboard</span>
-              <ol className="breadcrumb">
+            <nav style={{ backgroundColor: "#F6F9FF" }}>
+              <ol className="breadcrumb py-1">
                 <li className="breadcrumb-item">
-                  <Link to="/dashboard" href="#">Home</Link>
+                
+                  <Link to={"/dashboard"} href="#">Home</Link>
                 </li>
-                <li className="breadcrumb-item active" aria-current="page">Library</li>
+                <li  aria-current="page">{window.location.pathname}</li>
               </ol>
             </nav>
             <div className="p-2">

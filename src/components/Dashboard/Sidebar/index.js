@@ -60,7 +60,7 @@ export default function DashBoardSidebar() {
 						<ul className="navbar-nav">
 							<li>
 								{/* style={{ padding: "12px", marginLeft: "10px" }} */}
-								<NavLink to={`${sidebarItem.url}`} className="nav-link sidebaritem" >
+								<NavLink to={`${sidebarItem.url}`} className="nav-link sidebaritem">
 									<span className="fs-5">{sidebarItem.icon}</span>
 									<span className="p-2">{sidebarItem.name}</span>
 								</NavLink>
