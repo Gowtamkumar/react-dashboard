@@ -1,6 +1,6 @@
 import React from 'react'
 import './login.css'
-import { Button, Checkbox, Form, Input } from 'antd';
+import { Button, Form, Input } from 'antd';
 
 export default function Login() {
 
@@ -16,12 +16,11 @@ export default function Login() {
     <section className="h-100 gradient-form" style={{ backgroundColor: "#eee" }}>
       <div className="container py-5 h-100">
         <div className="row d-flex justify-content-center align-items-center h-100">
-          <div className="col-xl-10">
+          <div className="col-md-10">
             <div className="card rounded-3 text-black">
               <div className="row g-0">
-                <div className="col-lg-6">
-                  <div className="card-body p-md-5 mx-md-4">
-
+                <div className="col-md-6">
+                  <div className="card-body p-5 text-center">
                     <div className="text-center">
                       <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
                         alt="logo" style={{ width: '185px' }} />
@@ -30,12 +29,12 @@ export default function Login() {
 
                     <Form
                       name="basic"
-                      labelCol={{
-                        span: 8,
-                      }}
-                      wrapperCol={{
-                        span: 16,
-                      }}
+                      // labelCol={{
+                      //   span: 8,
+                      // }}
+                      // wrapperCol={{
+                      //   span: 16,
+                      // }}
                       initialValues={{
                         remember: true,
                       }}
@@ -44,7 +43,7 @@ export default function Login() {
                       autoComplete="off"
                     >
                       <Form.Item
-                        label="Username"
+                        // label="Username"
                         name="username"
                         rules={[
                           {
@@ -53,11 +52,11 @@ export default function Login() {
                           },
                         ]}
                       >
-                        <Input />
+                        <Input placeholder='User name' className='w-75' />
                       </Form.Item>
 
                       <Form.Item
-                        label="Password"
+                        // label="Password"
                         name="password"
                         rules={[
                           {
@@ -66,7 +65,7 @@ export default function Login() {
                           },
                         ]}
                       >
-                        <Input.Password />
+                        <Input.Password placeholder='Password' className='w-75' />
                       </Form.Item>
 
                       {/* <Form.Item
@@ -80,21 +79,16 @@ export default function Login() {
                         <Checkbox>Remember me</Checkbox>
                       </Form.Item> */}
 
-                      <Form.Item
-                        wrapperCol={{
-                          offset: 8,
-                          span: 16,
-                        }}
-                      >
-                        <Button type="primary" htmlType="submit">
-                          Submit
-                        </Button>
+                      <Form.Item>
+                        <div className="row text-center mt-3 mx-auto mb-4 justify-content-center">
+                          <Button type='primary' htmlType="submit" className="loginLeft w-75" >Sign In</Button>
+                        </div>
                       </Form.Item>
                     </Form>
 
                   </div>
                 </div>
-                <div className="col-lg-6 d-flex align-items-center gradient-custom-2">
+                <div className="col-md-6 d-flex align-items-center gradient-custom-2">
                   <div className="text-white px-3 py-4 p-md-5 mx-md-4">
                     <h4 className="mb-4">We are more than just a company</h4>
                     <p className="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

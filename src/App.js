@@ -14,10 +14,10 @@ const NotFound = React.lazy(() => import('./view/NotFound'));
 const Sidebar1 = React.lazy(() => import('./view/Sidebar'));
 const Setting = React.lazy(() => import('./view/setting'));
 
-const loading = () => <div class="text-center">
-<div class="spinner-border" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>
+const loading = () => <div className="text-center">
+  <div className="spinner-border" role="status">
+    <span className="visually-hidden">Loading...</span>
+  </div>
 </div>
 
 function App() {
