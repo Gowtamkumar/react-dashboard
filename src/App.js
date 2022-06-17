@@ -1,17 +1,24 @@
 import React from 'react'
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import Login from './view/Auth/Login';
-import IndexLayoutd from './components/Dashboard';
-import Sidebar1 from './view/Sidebar';
 import Sidebar2 from './view/Sidebar2';
 import Sidebar3 from './view/Sidebar3';
 import Sidebar4 from './view/Sidebar4';
-import Dashboard from './view/Dashboard';
-import Setting from './view/setting';
-import NotFound from './view/NotFound';
 
-const loading = () => <div className="pt-3 text-center">Loading...</div>
+
+
+const Login = React.lazy(() => import('./view/Auth/Login'));
+const Dashboard = React.lazy(() => import('./view/Dashboard'));
+const IndexLayoutd = React.lazy(() => import('./components/Dashboard'));
+const NotFound = React.lazy(() => import('./view/NotFound'));
+const Sidebar1 = React.lazy(() => import('./view/Sidebar'));
+const Setting = React.lazy(() => import('./view/setting'));
+
+const loading = () => <div class="text-center">
+<div class="spinner-border" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+</div>
 
 function App() {
   return (

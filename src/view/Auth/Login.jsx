@@ -69,16 +69,16 @@ export default function Login() {
                         <Input.Password />
                       </Form.Item>
 
-                      <Form.Item
+                      {/* <Form.Item
                         name="remember"
                         valuePropName="checked"
                         wrapperCol={{
-                          offset: 110,
+                          offset: 10,
                           span: 16,
                         }}
                       >
                         <Checkbox>Remember me</Checkbox>
-                      </Form.Item>
+                      </Form.Item> */}
 
                       <Form.Item
                         wrapperCol={{
