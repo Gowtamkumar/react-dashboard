@@ -3,7 +3,6 @@ import DashBoardNavbar from "../Navbar";
 import DashBoardSidebar from "../Sidebar";
 import React, { useState } from "react"
 import { Link, Outlet } from "react-router-dom";
-import dashboardRoutes from "../../../_nav";
 
 
 export default function IndexLayout() {
@@ -13,9 +12,13 @@ export default function IndexLayout() {
   return (
     <div className="container-fluid " style={{ backgroundColor: "#F6F9FF" }}>
       <div className="layoutContainer">
-        <div className="desktop mt-2">
-          {toggleSidebar && <DashBoardSidebar />}
-        </div>
+        {
+
+          toggleSidebar &&
+          <div className="desktop mt-2 testTransition">
+            <DashBoardSidebar />
+          </div>
+        }
         <div className="flex-item-right mt-2">
           <DashBoardNavbar
             setToggleSidebar={setToggleSidebar}
@@ -25,10 +28,10 @@ export default function IndexLayout() {
             <nav style={{ backgroundColor: "#F6F9FF" }}>
               <ol className="breadcrumb py-1">
                 <li className="breadcrumb-item">
-                
+
                   <Link to={"/dashboard"} href="#">Home</Link>
                 </li>
-                <li  aria-current="page">{window.location.pathname}</li>
+                <li aria-current="page">{window.location.pathname}</li>
               </ol>
             </nav>
             <div className="p-2">

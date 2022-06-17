@@ -19,6 +19,7 @@ function App() {
       <Routes>
         <Route path="/login" name="Login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/" name="dashboard" element={<IndexLayoutd />} /> {/*this route default route*/}
         <Route path="dashboard" name="dashboard" element={<IndexLayoutd />} >
           <Route path="/dashboard" name="dashboard" element={<Dashboard />} />
           <Route path="sidebar1" name="dashboard" element={<Sidebar1 />} />
