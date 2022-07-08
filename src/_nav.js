@@ -12,6 +12,11 @@ const dashboardRoutes = [
     heading: "Peoples"
   },
   {
+    name: "Customers",
+    url: "/dashboard/customers",
+    icon: <AiFillTool />
+  },
+  {
     title: "Food",
     id: "food-nav",
     icon: <BsFillDice4Fill />,
@@ -36,7 +41,6 @@ const dashboardRoutes = [
         childIcon: <BsFillDice4Fill />,
         name: "Sidebar 4",
         url: "/dashboard/sidebar4"
-
       }
     ]
   },

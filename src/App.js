@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import Sidebar2 from './view/Sidebar2';
 import Sidebar3 from './view/Sidebar3';
 import Sidebar4 from './view/Sidebar4';
+import Customers from './view/Customer/Customers';
 
 
 
@@ -34,6 +35,7 @@ function App() {
           <Route path="sidebar3" name="dashboard" element={<Sidebar3 />} />
           <Route path="sidebar4" name="dashboard" element={<Sidebar4 />} />
           <Route path="setting" name="dashboard" element={<Setting />} />
+          <Route path="customers" name="List of Customers" element={<Customers />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
